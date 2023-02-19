@@ -1,0 +1,14 @@
+.avatar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.input {
+    width: 200px;
+    margin: 8px;
+    padding: 5px;
+    border-radius: 5px;
+}
