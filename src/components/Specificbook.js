@@ -1,13 +1,16 @@
-import * as React from "react";
+import React, { useState } from "react";
 import "./Specificbook.css";
 import cart from './cart.svg';
 import cover from './cover.jpg';
 
-
-
 const Specificbook = () => {
-  
-  return (
+    const [val, setVal] = useState(0)
+    const price = 52.72
+    const onValueChange = (event) => {
+      this.setState({value:event.target.value})
+    }
+    const totalpr = price*val
+  return (  
     <div>
         <hr />
             <header>
@@ -39,9 +42,17 @@ const Specificbook = () => {
                 <p><b>Description:</b> A book providing an introduction to the JavaScript language and programmind in general.</p>
             </div>
             <div class="column" >
-                <p id="price">52.72</p>
-                <input type="number" min="1" step="1" id="count" name="user_count"/>
-                <p>totalprice</p>
+                <p id="price">{price}</p>
+                     <input
+                        type="number"
+                        min = '1'
+                        max = '42'
+                        value={val}
+                        onChange={(e) =>
+                        setVal((v) => (e.target.validity.valid ? e.target.value : v))
+                        }
+                    />
+                <p id="totalprice">{totalpr}</p>
                 <button type="submit">Add to cart</button>
             </div>
         </div>

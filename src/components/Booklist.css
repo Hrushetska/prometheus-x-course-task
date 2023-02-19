@@ -47,9 +47,16 @@ header nav {
   height: 100vh;
   padding: 1% 2%;
   background: #fff;
-  min-height: 200px;
-  max-height: 220px;
+  min-height: 250px;
+  max-height: 300px;
   box-sizing: border-box;
 }
 /*Styles */
 .df{list-style-type: disc;}
+
+.alnright {
+    text-align: right; 
+}
+.alnleft {
+    text-align: left; 
+}
