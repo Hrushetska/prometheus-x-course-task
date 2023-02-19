@@ -21,6 +21,8 @@ const Booklist = () => {
                 </header>
             <hr />
             <main>
+                <input type="text" placeholder="Shearch by book name"/>
+                <input type="number" placeholder="Price"/>
                 <ul class="SG">
                     {books.map((book) => (
                         <li class="sgLi">
